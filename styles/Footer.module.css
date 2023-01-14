@@ -1,0 +1,100 @@
+.container {
+  height: 300px;
+  background-color: #252422;
+  display: flex;
+  position: relative;
+}
+
+.item {
+  flex: 1;
+  position: relative;
+  display: flex;
+  padding: 50px;
+  /* margin-left: 100px; */
+}
+
+.item:last-child {
+  flex: 2;
+  padding: 50px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.title,
+.motto {
+  color: #eb5e28;
+}
+
+.text {
+  color: #edede9;
+}
+
+@media screen and (max-width: 1203px) {
+  .item:first-child {
+    width: auto;
+    height: auto;
+    padding: 50px;
+  }
+  .item {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .item:first-child {
+    width: 500;
+    height: 100%;
+    padding: 50px;
+  }
+  .item {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .item:first-child {
+    display: none;
+  }
+  .item {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item:first-child {
+    display: none;
+  }
+
+  .item {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+  }
+  .item:first-child {
+    display: none;
+  }
+
+  .item {
+    flex-direction: column;
+    margin: 0;
+  }
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+  .motto {
+    font-size: 26px;
+  }
+}
