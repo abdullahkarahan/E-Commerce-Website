@@ -116,7 +116,9 @@ const Product = ({ pizza }) => {
 }
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/products/${params.id}`)
+  const res = await axios.get(
+    `https://e-commerce-website-one-pearl.vercel.app/api/products/${params.id}`
+  )
   return {
     props: {
       pizza: res.data,

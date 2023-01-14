@@ -46,7 +46,10 @@ const Add = ({ setClose }) => {
 
       const newProduct = { title, desc, prices, extraOptions, img: url }
 
-      await axios.post('http://localhost:3000/api/products', newProduct)
+      await axios.post(
+        'https://e-commerce-website-one-pearl.vercel.app/api/products',
+        newProduct
+      )
       setClose(true)
       toast.success('Product added successfully! Please refresh the page!', {
         position: 'top-center',

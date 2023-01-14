@@ -25,7 +25,9 @@ export const getServerSideProps = async (ctx) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true
   }
-  const res = await axios.get('http://localhost:3000/api/products')
+  const res = await axios.get(
+    'https://e-commerce-website-one-pearl.vercel.app/api/products'
+  )
   console.log(res)
 
   return {
